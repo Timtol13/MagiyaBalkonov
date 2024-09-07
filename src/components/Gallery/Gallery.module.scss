@@ -1,0 +1,105 @@
+.galleryContainer{
+    display: flex;
+    width: 100%;
+    height: auto; /* Позволяет контейнеру адаптироваться под контент */
+    max-width: 85vw; /* Максимальная ширина */
+    justify-content: center;
+    overflow: hidden;
+    margin: 80px auto;
+    position: relative;
+    z-index: 0;
+    .galleryMarquee{
+        height: 100% !important;
+        width: 30%;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        position: relative;
+        z-index: 2;   
+        img{
+            border-radius: 10px;
+            margin: 30px auto;
+            max-height: 100%;
+            width: auto;
+        }
+    }
+    .galleryMarquee2{
+        transform: rotate(180deg);
+        .marqueePhoto{
+            transform: rotate(180deg);
+            margin: 30px auto;
+        }
+    }
+    .wrapper{
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, var(--dark-blue), transparent 50%, var(--dark-blue));
+    }
+}
+
+.animate-marquee-up{
+    width: 100% !important;
+}
+
+@media (max-width: 1200px) {
+    .galleryContainer {
+        height: 120vh;
+        width: 90vw;
+
+        .galleryMarquee {
+            width: 100%;
+            img {
+                height: 100%;
+                margin: 20px auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .galleryContainer {
+        height: 200vh;
+        width: 95vw;
+        flex-direction: column;
+
+        .galleryMarquee {
+            width: 100%;
+            min-height: 560px;
+            img {
+                margin: 15px auto;
+            }
+        }
+
+        .wrapper {
+            background: linear-gradient(to bottom, var(--dark-blue), transparent 30%, var(--dark-blue));
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .galleryContainer {
+        height: 200vh;
+        width: 100vw;
+
+        .galleryMarquee {
+            width: 100%;
+            img {
+                margin: 10px auto;
+            }
+            &:last-child{
+                img{
+                    margin-top: 0 !important;
+                    margin-bottom: auto;
+                    width: 100% !important;
+                    height: auto !important;
+                }
+            }
+        }
+
+        .wrapper {
+            background: linear-gradient(to bottom, #00173699, transparent 50%, #00173699);
+        }
+    }
+}

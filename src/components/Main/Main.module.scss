@@ -1,0 +1,44 @@
+.main{
+    width: 100%;
+    background-color: var(--dark-blue);
+    overflow: hidden;
+}
+
+.container{
+    max-width: 100vw;
+    width: 100%;
+    min-height: 110vh;
+    overflow: hidden;
+    .blockTitle{
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 120px;
+        letter-spacing: -1px;
+        color: #ffffff50;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container .blockTitle {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .blockTitle {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .blockTitle {
+        font-size: 30px;
+    }
+    .main{
+        width: 98%;
+        background-color: var(--dark-blue);
+    }
+}
+
+

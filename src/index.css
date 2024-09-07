@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --dark-blue: #001736;
+  --white: #F0F0F0;
+  --blue: #062651;
+  --orange: #F8A219;
+  --borderRadius: 20px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-blue);
+  font-family: 'Montserrat', sans-serif;
+}
+
+a{
+  color: unset;
+  text-decoration: none;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  background: var(--orange) !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after{
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: var(--dark-blue) !important;
+}
+
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

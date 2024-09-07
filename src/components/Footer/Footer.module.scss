@@ -1,0 +1,268 @@
+.footerContainer{
+    height: 430px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    .footerBlock{
+        max-width: 90vw;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .footerBlockLeft{
+            margin-left: 140px;
+            padding: 20px;
+            background-color: #00173650;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            margin-top: 100px;
+            color: var(--white);
+            .footerBlockLeftImage{
+                width: 120px;
+                height: 120px;
+                color: var(--dark-blue);
+                img{
+                    height: 100%;
+                }
+            }
+            h4{
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0;
+                &:first-child{
+                    margin: 15px 0;
+                }
+            }
+        }
+        .footerBlockRight{
+            width: 350px;
+            display: flex;
+            margin-top: 100px;
+            .footerLinks {
+                overflow: hidden;
+                right: 70px;
+                color: var(--dark-blue);
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                a{
+                    text-align: right;
+                    font-size: 24px;
+                    font-weight: bold;
+                    letter-spacing: -5%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footerContainer {
+        height: auto; // Adjust height for large tablets
+
+        .footerBlock {
+            align-items: center;
+
+            .footerBlockLeft {
+                margin-left: 0; // Remove margin for better centering
+                margin-top: 20px !important;
+            }
+
+            .footerBlockRight {
+                width: 100%;
+                justify-content: center; // Center content for large tablets
+                margin-top: 50px !important;
+                gap: 10px !important;
+
+                .footerLinks {
+                    right: 0; // Adjust position
+                    a {
+                        font-size: 18px !important; // Adjust font size for large tablets
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footerContainer {
+        padding: 20px; // Add padding for smaller screens
+        background-size: auto 100%;
+        .footerBlock {
+            .footerBlockLeft {
+                margin-top: 30px;
+                padding: 15px;
+                gap: 10px; // Reduce gap for smaller screens
+
+                .footerBlockLeftImage {
+                    width: 100px; // Reduce image size for smaller screens
+                    height: 100px;
+                }
+
+                h4 {
+                    font-size: 14px; // Adjust font size for smaller screens
+                    line-height: 20px;
+                }
+            }
+
+            .footerBlockRight {
+                width: 100%; // Full width for smaller screens
+                margin-top: 30px;
+
+                .footerLinks {
+                    a {
+                        font-size: 18px; // Adjust font size for smaller screens
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .footerContainer {
+        padding: 10px; // Further reduce padding for mobile screens
+
+        .footerBlock {
+            .footerBlockLeft {
+                margin-top: 20px;
+                padding: 10px;
+                gap: 10px; // Further reduce gap for mobile
+
+                .footerBlockLeftImage {
+                    width: 80px; // Reduce image size for mobile
+                    height: 80px;
+                }
+
+                h4 {
+                    font-size: 12px; // Adjust font size for mobile
+                    line-height: 18px;
+                }
+            }
+
+            .footerBlockRight {
+                width: 100%; // Full width for mobile
+                margin-top: 20px;
+
+                .footerLinks {
+                    gap: 5px;
+                    a {
+                        font-size: 12px; // Adjust font size for mobile
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 392px) {
+    .footerContainer {
+        padding: 8px;
+
+        .footerBlock {
+            .footerBlockLeft {
+                margin-top: 15px;
+                padding: 8px;
+                gap: 12px;
+
+                .footerBlockLeftImage {
+                    width: 70px;
+                    height: 70px;
+                }
+
+                h4 {
+                    font-size: 11px;
+                    line-height: 16px;
+                }
+            }
+
+            .footerBlockRight {
+                width: 100%;
+                margin-top: 15px;
+
+                .footerLinks {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .footerContainer {
+        padding: 6px;
+
+        .footerBlock {
+            .footerBlockLeft {
+                margin-top: 12px;
+                padding: 6px;
+                gap: 10px;
+
+                .footerBlockLeftImage {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                h4 {
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }
+
+            .footerBlockRight {
+                width: 100%;
+                margin-top: 12px;
+
+                .footerLinks {
+                    a {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 342px) {
+    .footerContainer {
+        padding: 5px;
+
+        .footerBlock {
+            .footerBlockLeft {
+                margin-top: 10px;
+                padding: 5px;
+                gap: 8px;
+
+                .footerBlockLeftImage {
+                    width: 55px;
+                    height: 55px;
+                }
+
+                h4 {
+                    font-size: 9px;
+                    line-height: 12px;
+                }
+            }
+
+            .footerBlockRight {
+                width: 100%;
+                margin-top: 10px;
+
+                .footerLinks {
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

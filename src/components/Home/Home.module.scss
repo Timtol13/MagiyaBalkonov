@@ -1,0 +1,137 @@
+.homeContainer {
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+    position: relative; 
+    z-index: 1;
+
+    .videoBlock {
+        width: 100%;
+        position: absolute;
+
+        video {
+            width: 100%;
+            object-fit: cover;
+            z-index: 0; 
+        }
+    }
+
+    .gradienBg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(to bottom, 
+              #00000099 0%, 
+              #00000050 70%, 
+              #00000099 100%);
+    }
+
+    .homeContent {
+        height: 100%;
+        max-width: 30%;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        margin-left: 20vw;
+
+        h1 {
+            font-size: clamp(36px, 15vw, 86px);
+            margin-bottom: 20px;
+        }
+
+        a {
+            background-color: var(--orange);
+            width: 280px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            color: var(--dark-blue);
+            font-size: 16px;
+            font-weight: 700;
+            gap: 20px;
+            text-transform: uppercase;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .homeContent {
+            max-width: 40%;
+            margin-left: 15vw;
+
+            h1 {
+                font-size: clamp(32px, 12vw, 72px);
+            }
+
+            a {
+                width: 240px;
+                height: 55px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        .homeContent {
+            max-width: 50%;
+            margin-left: 10vw;
+
+            h1 {
+                font-size: clamp(28px, 10vw, 64px);
+            }
+
+            a {
+                width: 220px;
+                height: 50px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 80px 0;
+        .homeContent {
+            max-width: 80%;
+            margin-left: 5vw;
+
+            h1 {
+                font-size: clamp(24px, 8vw, 56px);
+            }
+
+            a {
+                width: 240px;
+                height: 45px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        height: 100vh;
+        .videoBlock{
+            height: 100%;
+            video{
+                height: 100%;
+                width: auto;
+            }
+        }
+        .homeContent {
+            max-width: 90%;
+            margin-left: 5vw;
+            h1 {
+                font-size: clamp(30px, 12vw, 45px);
+            }
+
+            a {
+                width: 210px;
+                height: 40px;
+                font-size: 12px;
+            }
+        }
+    }
+}

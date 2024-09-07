@@ -1,0 +1,170 @@
+.materialsContainer {
+    color: #ffffff;
+    padding: 0 80px;
+    margin: 0 0 80px;
+
+    .materialsContent {
+        display: flex;
+        flex-direction: column;
+
+        .materialsBlock {
+            display: flex;
+            flex-direction: column;
+
+            .blockTitleLeft, .blockTitleRight {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+
+                h2 {
+                    flex: 0;
+                    font-weight: bold;
+                    font-size: 62px;
+                }
+
+                hr {
+                    flex: 1;
+                }
+            }
+
+            .blockTitleRight {
+                flex-direction: row-reverse;
+            }
+
+            .materialBlockContentLeft, .materialBlockContentRight {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+
+                .contentText, .contentImage {
+                    width: 50%;
+                    height: 600px;
+                }
+
+                .contentText p {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: var(--white);
+                    opacity: .7;
+                }
+
+                .contentImage {
+                    overflow: hidden;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        border-radius: 20px;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .materialBlockContentRight {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        padding: 0 40px;
+
+        .materialsContent {
+            .materialsBlock {
+                .blockTitleLeft h2, .blockTitleRight h2 {
+                    font-size: 50px;
+                }
+
+                .materialBlockContentLeft, .materialBlockContentRight {
+                    .contentText p {
+                        font-size: 20px;
+                    }
+
+                    .contentText, .contentImage {
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 992px) {
+        padding: 0 20px;
+
+        .materialsContent {
+            .materialsBlock {
+                .blockTitleLeft h2, .blockTitleRight h2 {
+                    font-size: 42px;
+                }
+
+                .materialBlockContentLeft, .materialBlockContentRight {
+                    flex-direction: column;
+                    gap: 30px;
+
+                    .contentText, .contentImage {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .contentText {
+                        order: 2;
+                    }
+
+                    .contentImage {
+                        order: 1;
+                    }
+                }
+
+                .materialBlockContentRight .contentText {
+                    order: 1;
+                }
+
+                .materialBlockContentRight .contentImage {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .materialsContent {
+            .materialsBlock {
+                .blockTitleLeft h2, .blockTitleRight h2 {
+                    font-size: 36px;
+                }
+
+                .materialBlockContentLeft, .materialBlockContentRight {
+                    .contentText p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 0 10px;
+
+        .materialsContent {
+            .materialsBlock {
+                .blockTitleLeft h2, .blockTitleRight h2 {
+                    font-size: 28px;
+                }
+
+                .materialBlockContentLeft, .materialBlockContentRight {
+                    gap: 15px;
+
+                    .contentText p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
